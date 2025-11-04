@@ -32,7 +32,7 @@ const EditEvent = ({ event, onClose, refresh }) => {
       if (confirmAction === "save") {
         const payload = {
           ...form,
-          sponsors: form.sponsors.split(",").map((s) => s.trim()),
+          sponsors: form.sponsors,
         };
 
         await fetch(`${BASE_URL}/${event._id}`, {
@@ -40,6 +40,7 @@ const EditEvent = ({ event, onClose, refresh }) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
+        console.log(payload);
         toast.success("Event updated successfully!");
       } else if (confirmAction === "delete") {
         await fetch(`${BASE_URL}/${event._id}`, {
