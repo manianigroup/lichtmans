@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import EditProduct from "./EditProduct";
+import { API_BASE } from '../api';
 import { FiChevronLeft, FiChevronRight, FiEdit } from "react-icons/fi";
 
 
-const BASE_URL = "http://localhost:5001/api/products";
+const BASE_URL = `${API_BASE}/api/products`;
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
