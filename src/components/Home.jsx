@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Hero from "./Hero";
+import DoorDashOrder from "./DoordashOrder";
 import Featured from "./Featured";
 import BestSellers from './BestSellers';
 import SpecialOffers from './SpecialOffers';
@@ -23,6 +24,7 @@ const Home = () => {
         }`}
       >
         <Hero />
+        <DoorDashOrder />
         <SpecialOffers />
         <Featured />
         {/* <NewArrivals /> */}

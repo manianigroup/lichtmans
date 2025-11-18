@@ -26,7 +26,9 @@ const ProductDetails = () => {
           <FiHome className="mr-1" /> Home
         </Link>
         <FiChevronRight className="mx-2" />
-        <Link to="/products" className="hover:text-rose-800">Products</Link>
+        <Link to="/products" className="hover:text-rose-800">
+          Products
+        </Link>
         <FiChevronRight className="mx-2" />
         <span className="text-rose-800 font-medium truncate max-w-[160px] sm:max-w-none">
           {product.name}
@@ -70,32 +72,75 @@ const ProductDetails = () => {
           )}
 
           {/* Product availability */}
-          <div className='flex flex-col sm:flex-row sm:items-center gap-3'>
-            <p className="text-2xl sm:text-3xl font-bold text-rose-800">${product.price}</p>
-            <p className="text-green-600 font-medium">
-              In Stock
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <p className="text-2xl sm:text-3xl font-bold text-rose-800">
+              ${product.price}
             </p>
+            <p className="text-green-600 font-medium">In Stock</p>
           </div>
 
           {/* Product details */}
-          <div className='flex flex-col gap-1 mt-4'>
-            <p className="text-xl font-semibold text-gray-700">Product details</p>
-            <p className="text-sm italic text-gray-600">Brand : <span className='font-semibold italic'>{product.brand}</span></p>
-            <p className="text-sm italic text-gray-600">Type of product : <span className='font-semibold italic'>{product.type}</span></p>
-            { product.subType ? <p className="text-sm italic text-gray-600">Style : <span className='font-semibold italic'>{product.subType}</span></p> : null }
-            <p className="text-sm italic text-gray-600">Bottle size : <span className='font-semibold italic'>{product.quantity}ml</span></p>
+          <div className="flex flex-col gap-1 mt-4">
+            <p className="text-xl font-semibold text-gray-700">
+              Product details
+            </p>
+            <p className="text-sm italic text-gray-600">
+              Brand :{" "}
+              <span className="font-semibold italic">{product.brand}</span>
+            </p>
+            <p className="text-sm italic text-gray-600">
+              Type of product :{" "}
+              <span className="font-semibold italic">{product.type}</span>
+            </p>
+            {product.subType ? (
+              <p className="text-sm italic text-gray-600">
+                Style :{" "}
+                <span className="font-semibold italic">{product.subType}</span>
+              </p>
+            ) : null}
+            <p className="text-sm italic text-gray-600">
+              Bottle size :{" "}
+              <span className="font-semibold italic">{product.quantity}ml</span>
+            </p>
           </div>
 
-          {/* Contact Link */}
-          <p className="text-gray-600 my-6 text-sm sm:text-base">
-            To place an order, please{" "}
-            <Link
-              to="/contact"
-              className="text-rose-800 font-medium hover:underline"
+          {/* Order Options */}
+          <div className="my-6 w-full">
+            <p className="text-gray-700 text-base font-medium">
+              Want to place an order?
+            </p>
+
+            {/* DoorDash Button */}
+            <a
+              href="https://www.doordash.com/convenience/store/37209085/?event_type=autocomplete&pickup=false"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center justify-center w-full sm:w-auto px-6 py-3 
+               bg-rose-800 text-white font-semibold rounded-lg shadow-lg 
+               hover:bg-rose-900 transition-all duration-300"
             >
-              contact us
-            </Link>.
-          </p>
+              Order Online via DoorDash
+            </a>
+
+            {/* Divider */}
+            <div className="flex items-center my-4">
+              <div className="flex-1 h-px bg-gray-300"></div>
+              <span className="px-3 text-gray-500 text-sm font-medium">OR</span>
+              <div className="flex-1 h-px bg-gray-300"></div>
+            </div>
+
+            {/* Contact Us Link */}
+            <p className="text-gray-600 text-sm sm:text-base">
+              Prefer to order by phone?{" "}
+              <Link
+                to="/contact"
+                className="text-rose-800 font-medium hover:underline"
+              >
+                Contact us here
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </div>
 
