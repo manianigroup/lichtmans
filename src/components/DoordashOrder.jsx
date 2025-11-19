@@ -9,7 +9,7 @@ const DoorDashOrder = () => {
             Order From DoorDash
           </h2>
           <p className="mt-2 text-lg md:text-xl opacity-90">
-            Get your favorite products delivered fast from Lichtman's Liquor Store.
+            Get your favorite products delivered fast from Lichtman's Wine & Liquor Store Inc.
           </p>
         </div>
 
