@@ -74,7 +74,7 @@ const SpecialOffers = () => {
               <div
                 key={offer._id}
                 onClick={() => openModal(offer)}
-                className="relative w-full h-[400px] sm:w-[50%] lg:w-[35%] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer transform hover:-translate-y-2"
+                className="relative w-full h-[500px] sm:w-[50%] lg:w-[35%] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer transform hover:-translate-y-2"
               >
                 {/* Badge */}
                 {offer.badge && (
@@ -109,7 +109,7 @@ const SpecialOffers = () => {
                     <FiClock className="text-rose-600" />
                     <span>Valid until {offer.validUntil}</span>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-rose-800 to-rose-900 text-white py-3 rounded-lg font-semibold hover:from-rose-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg">
+                  <button className="mt-auto w-full bg-gradient-to-r from-rose-800 to-rose-900 text-white py-2.5 rounded-lg font-semibold hover:from-rose-700 hover:to-red-800 transition-all duration-300 shadow-md cursor-pointer">
                     View Details
                   </button>
                 </div>
